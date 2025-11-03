@@ -22,15 +22,37 @@ Os serviços principais são:
 ![Fluxo n8n](./fluxo-n8n.png)
 
 ### Etapas do Workflow:
-1. **Trigger manual** – o fluxo inicia quando o usuário clica em **"Executar workflow"**.
-2. **Leitura de planilha** – o sistema lê a planilha de contatos e mensagens.
-3. **Extração e formatação** – os dados são tratados via código JavaScript.
-4. **Loop** – percorre cada linha/contato.
-5. **Envio de mensagem** – o n8n envia mensagens através do WAHA.
-6. **Registro do envio** – cada resultado é registrado de volta na planilha.
-7. **Controle de contadores** – contabiliza o progresso dos envios.
-8. **Validação de horário/dia** – garante que mensagens só sejam enviadas em horários permitidos.
-9. **Delays (Wait)** – adiciona pausas automáticas entre envios, evitando bloqueios do WhatsApp.
+## 🧩 Etapas detalhadas do Workflow
+
+Este fluxo automatizado foi desenvolvido no **n8n** para gerenciar o contato com ex-alunos do programa **Geração Tech** de forma eficiente, organizada e segura. Cada etapa foi pensada para garantir o envio correto das mensagens, registrar informações e respeitar horários permitidos.
+
+1. **Trigger manual**  
+   O workflow inicia quando o usuário clica em **"Executar workflow"** no n8n. Este acionamento manual garante que o processo só comece quando for necessário, evitando envios acidentais ou repetidos.
+
+2. **Leitura de planilha**  
+   O sistema acessa uma planilha contendo os dados dos ex-alunos, incluindo nome, contato (WhatsApp), mensagens personalizadas e informações relevantes para o envio. Essa etapa garante que todas as informações necessárias para cada envio estejam disponíveis de forma organizada.
+
+3. **Extração e formatação dos dados**  
+   Antes de enviar as mensagens, os dados da planilha passam por uma etapa de tratamento utilizando **JavaScript**. Aqui, campos são validados, nomes e textos são ajustados e dados faltantes ou incorretos podem ser filtrados. Isso garante que a mensagem enviada seja personalizada e correta.
+
+4. **Loop por cada contato**  
+   O workflow percorre cada linha da planilha, garantindo que cada ex-aluno seja processado individualmente. Essa lógica de repetição evita que algum registro seja perdido e permite tratar cada envio separadamente.
+
+5. **Envio de mensagem via WAHA**  
+   Para cada contato, o workflow envia a mensagem personalizada utilizando a API **WAHA (WhatsApp HTTP API)**. A integração garante confiabilidade no envio e permite rastrear o status de cada mensagem.
+
+6. **Registro do envio**  
+   Após o envio, o workflow registra o resultado na planilha. Informações como "enviado" são salvas, permitindo monitoramento e auditoria do processo.
+
+7. **Controle de contadores**  
+   O sistema mantém um registro do progresso total, contabilizando quantas mensagens já foram enviadas e quantas ainda faltam. Esse controle facilita o acompanhamento em tempo real e ajuda a gerenciar grandes volumes de envio.
+
+8. **Validação de horário e dia**  
+   Antes de cada envio, o workflow verifica se a mensagem está sendo enviada dentro do horário definido. Essa validação impede que mensagens sejam enviadas fora do horário comercial ou em dias não autorizados, respeitando regras de comunicação e boas práticas do WhatsApp.
+
+9. **Delays (Wait)**  
+   Para evitar bloqueios ou problemas de spam no WhatsApp, o workflow adiciona pausas automáticas entre cada envio. Esses delays garantem que o volume de mensagens seja distribuído ao longo do tempo, mantendo o fluxo seguro e eficiente.
+
 
 ---
 
