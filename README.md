@@ -37,11 +37,13 @@ Os serviços principais são:
 ## 🧱 Estrutura de Arquivos
 
 
-- ├── docker-compose.yaml 
-- ├── media/ 
-- ├── sessions/
-- ├── fluxo-n8n.png 
-- └── README.md 
+## 🧱 Estrutura de Arquivos
+
+- docker-compose.yaml 
+- media/ 
+- sessions/
+- fluxo-n8n.png 
+- README.md
 
 ---
 
@@ -73,5 +75,7 @@ O fluxo garante:
 - O acesso à instância AWS é restrito via SSH.
 - Credenciais sensíveis estão armazenadas no arquivo `.env` (não versionado).
 - Atualizações da imagem WAHA podem ser aplicadas com:
+
   ```bash
   docker compose pull && docker compose up -d
+
