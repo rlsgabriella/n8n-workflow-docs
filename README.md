@@ -60,12 +60,15 @@ Este fluxo automatizado foi desenvolvido no **n8n** para gerenciar o contato com
 
 
 ## 🧱 Estrutura de Arquivos
-
-- docker-compose.yaml 
-- media/ 
-- sessions/
-- fluxo-n8n.png 
-- README.md
+```
+├── README.md 
+├── docker/ 
+│ ├── Dockerfile 
+│ └── docker-compose.yaml 
+├── .env.sample 
+├── n8n.json 
+├── fluxo-n8n.png 
+```
 
 ---
 
