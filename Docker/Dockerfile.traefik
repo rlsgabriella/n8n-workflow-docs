@@ -1,7 +1,3 @@
 FROM traefik
 
-# Copie arquivo de configuração se tiver
-# COPY traefik.toml /etc/traefik/traefik.toml
-
-# Exponha as portas HTTP e HTTPS
 EXPOSE 80 443

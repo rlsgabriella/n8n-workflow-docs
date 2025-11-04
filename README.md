@@ -56,8 +56,6 @@ Este fluxo automatizado foi desenvolvido no **n8n** para gerenciar o contato com
 
 ---
 
-## 🧱 Estrutura de Arquivos
-
 
 ## 🧱 Estrutura de Arquivos
 ```

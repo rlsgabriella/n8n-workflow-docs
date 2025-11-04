@@ -1,5 +1,4 @@
 FROM devlikeapro/waha
 
-# Exponha a porta padrão caso queira acessar diretamente
 EXPOSE 3000
 

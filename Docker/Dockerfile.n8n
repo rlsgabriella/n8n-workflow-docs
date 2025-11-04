@@ -1,11 +1,7 @@
 FROM docker.n8n.io/n8nio/n8n
 
-# Defina o ambiente para produção
+
 ENV NODE_ENV=production
 
-# Se quiser, adicione pacotes adicionais
-# RUN npm install some-package
-
-# Exponha a porta padrão
 EXPOSE 5678
 
