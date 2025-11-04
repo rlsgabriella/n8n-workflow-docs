@@ -1,4 +1,8 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+--
+![Deploy on AWS](https://img.shields.io/badge/Deploy%20on-AWS-orange?logo=amazonaws)
+
+
 
 # 🤖 Projeto de Automação de Mensagens — n8n + WAHA
 
