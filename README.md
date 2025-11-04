@@ -1,3 +1,5 @@
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 # 🤖 Projeto de Automação de Mensagens — n8n + WAHA
 
 Este repositório documenta o fluxo automatizado desenvolvido em **n8n**, integrado ao **WAHA (WhatsApp HTTP API)** e **hospedado na AWS** utilizando **Docker**.  
